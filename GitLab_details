@@ -1,0 +1,119 @@
+Gitlab - to generate SSh key 
+
+PS D:\MyProject> ssh-keygen -t rsa -b 4096 -C "nagendramv48@gmail.com"
+Generating public/private rsa key pair.
+Enter file in which to save the key (C:\Users\Nagendra V Gowda/.ssh/id_rsa):
+Created directory 'C:\\Users\\Nagendra V Gowda/.ssh'.
+Enter passphrase (empty for no passphrase):
+Enter same passphrase again:
+Your identification has been saved in C:\Users\Nagendra V Gowda/.ssh/id_rsa
+Your public key has been saved in C:\Users\Nagendra V Gowda/.ssh/id_rsa.pub
+The key fingerprint is:
+SHA256:gLvVqQmlncAwYgRzMH4gW2FMf5JUQFUDLHua/LueCAw nagendramv48@gmail.com
+The key's randomart image is:
++---[RSA 4096]----+
+|XBOo+=+oo        |
+|+Oo*.o.  .       |
+|.. .Bo+          |
+|  . .O.+ .       |
+|E  .+++ S        |
+| o  ++ o         |
+|  o ..o          |
+|   . ...         |
+|    ..=o         |
++----[SHA256]-----+
+
+Nagendra V Gowda@NAGENDRA MINGW64 ~
+$ ssh-keygen -t rsa -b 4096 -C "nagendramv48@gmail.com"
+Generating public/private rsa key pair.
+Enter file in which to save the key (/c/Users/Nagendra V Gowda/.ssh/id_rsa):
+/c/Users/Nagendra V Gowda/.ssh/id_rsa already exists.
+Overwrite (y/n)? y
+Enter passphrase (empty for no passphrase):
+Enter same passphrase again:
+Your identification has been saved in /c/Users/Nagendra V Gowda/.ssh/id_rsa
+Your public key has been saved in /c/Users/Nagendra V Gowda/.ssh/id_rsa.pub
+The key fingerprint is:
+SHA256:zDCACGoFxWBnCWdTuobqScWtL1i2vCQbzNI+3SMUl+U nagendramv48@gmail.com
+The key's randomart image is:
++---[RSA 4096]----+
+|o**X+.           |
+|+ Boo.  .        |
+|.. .  o+         |
+|. o + o=E        |
+| . = +  S        |
+|+.ooo            |
+|o**=..           |
+|+oB++ o          |
+| +.ooo .         |
++----[SHA256]-----+
+
+
+The error you're encountering suggests you're trying to run commands that are typically used in Unix-like environments (e.g., macOS or Linux) on a Windows system, likely using PowerShell or Command Prompt. Here's how to properly set up and use SSH on Windows, including adding an SSH key to your GitLab profile:
+
+### Step 1: Install Git for Windows
+Make sure you have Git for Windows installed, which includes Git Bash, a terminal emulator that supports Unix commands.
+
+- Download and install [Git for Windows](https://gitforwindows.org/).
+
+### Step 2: Generate an SSH Key
+1. **Open Git Bash** (installed with Git for Windows).
+2. **Generate the SSH key**:
+   ```bash
+   ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
+   ```
+   - Follow the prompts to save the key to the default location and optionally set a passphrase.
+
+### Step 3: Start the SSH Agent
+1. **Start the SSH agent** in Git Bash:
+   ```bash
+   eval "$(ssh-agent -s)"
+   ```
+2. **Add your SSH private key to the SSH agent**:
+   ```bash
+   ssh-add ~/.ssh/id_rsa
+   ```
+
+### Step 4: Copy the SSH Key to Your Clipboard
+1. **Copy the SSH key**:
+   ```bash
+   cat ~/.ssh/id_rsa.pub | clip
+   ```
+
+### Step 5: Add the SSH Key to Your GitLab Profile
+1. **Log in to GitLab**.
+2. **Navigate to your profile settings**:
+   - Click on your avatar in the upper-right corner and select `Settings`.
+3. **Go to the SSH Keys section**:
+   - In the left sidebar, click on `SSH Keys`.
+4. **Add your SSH key**:
+   - In the “Key” field, paste the SSH key you copied earlier.
+   - Optionally, add a title to help identify the key.
+   - Click the `Add key` button.
+
+### Step 6: Test Your SSH Connection
+1. **Test the connection** in Git Bash:
+   ```bash
+   ssh -T git@gitlab.com
+   ```
+   - If this is your first time connecting, you may see a message asking if you want to continue connecting. Type `yes` and press Enter.
+   - You should see a message like: `Welcome to GitLab, @your_username!`
+
+### Troubleshooting
+If you're still having issues, here are a few additional tips:
+- Ensure that the `ssh-agent` service is running. You can start it manually by running the following in an elevated PowerShell prompt:
+  ```powershell
+  Start-Service ssh-agent
+  ```
+- Make sure `ssh-agent` is enabled to start automatically:
+  ```powershell
+  Get-Service -Name ssh-agent | Set-Service -StartupType Automatic
+  ```
+
+By following these steps using Git Bash on Windows, you should be able to generate, add, and use an SSH key with GitLab without encountering the errors you faced.
+
+___________________________________________________________________________________________________________________________________________
+https://github.com/vasanthshanmugam/jmeter_test
+
+wget https://dl.influxdata.com/influxdb/releases/influxdb-1.8.10_windows_amd64.zip -UseBasicParsing -OutFile influxdb-1.8.10_windows_amd64.zip
+Expand-Archive .\influxdb-1.8.10_windows_amd64.zip -DestinationPath 'C:\Program Files\InfluxData\influxdb\'

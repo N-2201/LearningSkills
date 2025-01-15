@@ -1,0 +1,37 @@
+Performance testing interview questions : 24-09-2024 
+1) How do you test in jmeter ?
+
+	- Suppose if we perform any particular scenario, First we need to get the requirements after that will prepare the workload model with the help of work load model we can create the scenarios , and in designed document will get the main business scenarios and what are the business scenarios needs to be performed and those has to be documented. after that i will prepare the test plan in jmeter as per the scenarios.after recording the scenario i ll do some enhancement like correlation, parameterization as per the requests if any seed data required will add csv data for that particlaur requests. once scripting is done will validate the flow using 1 user in local jmeter like smoke testing.after everything works fine will perform real testing.
+
+2) In jmeter you are mentioning some assertions which assertions you are using ?
+
+	- Currently my project using the Response assetion most of the scenarios i have used this assertion.
+
+3) Have you used Regular expression in jmeter ? what is the diff between Contains and matches ?
+
+	- Yes used , Contains - some of the targets should match in the regular expression. 
+
+4) What are the diffent types of Processors are available in jmeter?
+	- there are 2 types processors . Pre processors and Post processsors.
+	Pre processor - It will execute the befor the sample request excution first it will check the pre processor conditions after that sample request wwill perform.
+	Post Porcessor - It will execute after the sample request performed 
+ while explaining give some small exapmple 
+
+5) Is it possible to use jmeter to record actions using a mobile device or does it support only web applications ?
+	- Yes we can record the mobile device 
+
+6) Scenarios based questions - Lets think Monday you will be receiving v1 build of xyz application - all the pages are being loaded in manner and Tuesday you will be recieving v2 build from dev team but web pages are taking long time load , what will be the reason what is the root cause you will be find how you will identify ?
+
+	-	 i will talk to the dev team , there is a issue (bottleneck) while loading the pages .
+	What are the possible RCA for this situation ? Excessive memory consumption, process CPU utilization , excessive use of js and css files, 
+
+7) SBQ- Lets say v1 build e commerce website you tested all the functionality and it went live , in Prod while customers are adding to the cart and payment page is taking more time to load what will be issue for this scenario ? 
+
+	- Payment page is thrird party dependies those API calls will might take to load the database , in real time so many users will hit the same page concurrently . when we are testing the same application we will use two or three people end users will minimal, when in real time customers are doing they are mupltiple people so lot of load is coming so there are lot of read/write operations are happening in database which is why database might be locked and db is not able to give the response to API or frontend site.
+
+	based on the above issue as a tester what are the implemention required as a high level note?
+
+	- As per my knowledge will test the particular API and will analyse any memory leakage happening at server side.
+	- Server is getting loaded, if we can ask them they can go for any load balancer in place to handle the multiple requests like a distributed environment.
+	- Load balancer will actually will do distribute or divide the load or balance the load.
+	

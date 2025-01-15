@@ -1,0 +1,65 @@
+Non Functional testing :
+
+Performance testing : 	
+
+
+Date : 08-01-2025 
+
+Performance Test Plan - 
+	We are  going to define what Performance Test plan ? 
+	It Talks about outlining the strategy and what is the approach 
+	what are the Resources and schedule	we are going to use this performance testing.
+	
+	It involves - Strategy , approach , Resources and Schedule .
+	
+	Key Components of the Test plan :
+1.	Objective - Here we are going to talk about the purpose and goal of the Performance testing.
+						ex- we must ask the stakeholders for their concern , we have to take discussions , meetings with the stakeholders and needs to be understand what is their concerns.
+								Is that System Reliability, Is that Speed or Is that Scaleability ?
+								Are we going to Test entire application or are we going to test any particular module or one Transaction ? - These things needs to be understand first.
+								Needs to be discuss with Stakeholder / Business Analyst / Client / Owners of the application 
+								
+						Note: 		We have to document the specific goals at the end of the objective .
+						
+						
+2.	Scope - Here we are going to talk about the Identify the Systems ,and what system am going to test ? Ex- Is that Retail applicationn or Online retail application 
+						What system am going to test wheather it will be admin system or End user system or wheather it is going to be a databases , app servers or web servers which part am going to test and what transactions are going to test / modules / funcationality are we going to test ? 
+						Understanding the systems in the sense - what are all the app servres and web servers involved and for the database servers and Is there any API serveices 	connected to it and What are the 3rd Parties are which are connected to it ?
+						what are the systems are involved and how does that affect like how does your testing affetcs all those areas?
+						
+						Ex: Scope - Online Ordering, Checking Cart, Place Orders etc , Batch Jobs 
+								Out Of Scope : Security Testing , APIs , Backend Processing 
+								
+3.	Identify the Test Environment - Here we are going to have 4 initial things needs to be checked 
+													1) Hardware - Servers , We have to know what is going to be the App Servers , Web Servers ?
+																			How many Web servers and App Servers ?
+																			What is the Configuration and Size of it ?
+																			Why it is important ? - Need to know Size of the Production , we are going to test only pre-prod Env 
+																			Wheather it could be a Stage /pre prod/ UAT 
+																			We have to scale down or we have to scale as per the Users 
+																			Ex: In Prod - We have 16GB Memory - 8-10 Web servrs 
+																												16GB Memory - 8-10 App Servers 
+																												16 GB Memory - 2 DB Servers 
+																					Cannot expect the same Configuration in Pre prod env 
+																					Need to calculate how much users are going to be use as per the configuartion 
+																			Database details - What is the Q length ? Memory ? How many Databases ? Do we have proper Load Balancing mechanism ?
+																					
+																			CPU , Memory , Disk Bandwidth I/O , Network I/O ,
+																			
+													2)	 Software - What is the Operating System are we using ?  ( windows/mac/linux)
+																			Testing tools are we going to use for that application ? (JMeter / LR/ Neo Load) - It defends on the client which tool are we going to use
+																			Need to understand how many license we need to use for that tool ?
+																			What are the Protocols we are going to support ?
+																			How many Load Generators we have ? - JMeter (Master Slave Configuartion ) 
+																			
+													3) Network - Bandwidth , latency , VPN connectivty , Mobile Network
+													4) Architecture Diagram - need to know How tha Web servers and APP servers are conencted .
+																								 How many load balancers between the web servers and app servers the database servers and what are the APIs are connected and what are the Microservices 
+																								 Wheater it is hosted on cloud or On premises or Hybrid 
+																								 
+																			
+																			
+4.		Develop a Workload Model :
+															Here we will define the User type and the behavior so like ( 70% users will search . 20 % users will select product, 10% users will buy)
+															Including the Scenarios such as peak traffic , off hours and Geographic distribution 
+																			

@@ -1,0 +1,6 @@
+
+
+docker container = influxdb:8086 running
+
+API token - jmeter integration token = 1j_xwHi6GEyxpFEcSnyMbAH4uY2ubMoLbcavzd20S5mYMWpQH1dn7cFv3vGPL0wY8FbDhlvGMjyJBj5ICIbmJQ==
+

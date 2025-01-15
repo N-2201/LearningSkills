@@ -1,0 +1,106 @@
+Date : 13-1-2025 
+
+Git - Git is a version control system,allows us to track the changes our code and keeps a history of our work.It will help to make it revert the changes if something went wrong.
+
+Create a directory to use the demo projects related Devops and other tools 
+
+Open cmd--> C:\ mkdir devopsStudios 
+
+devopsStudios makes another directory to use for Git 
+
+git init -- when you run a git init in a directory it initialize a new git repositiry which is turning this particular directory (TFS ) into Version control project . what happens a hidden folder which is named .init is created. it includes all the meta data and the configurations that we used manage the repositiry which includes the commit history the branches the tags and staging area and remote repositiry every single thing will be configured in all these files.
+		HEAD - whenever we have the branches it actually points to the current branch , get head will actually have the current branch.
+		Objects - Store all the objects like commit, trees ,blobs 
+		refs - Reference to the branch and tags 
+		config - Contains the repository specific configuartion 
+		
+		
+git add - Used to add the changes , it can be new file or it can be a modified file can be a deleted file from working directory to the Staging area in git.
+				Staging area is where you prepare changes for the next commit , think it is like a checklist what changes you want to include in the commit.
+				
+				
+				mkdir git_demo
+				
+git commit - commit the changes from staged are 
+						git commit -m "first commit"
+						
+						amend a commit - modify the last commit 
+						
+git log - will check all the commits 
+
+=========================================================================================================================================
+
+Devops lifecycle refers to a continuoues process that integrates developement (Dev) and Operations (Ops) to deliver high - quality software faster and more reliably.
+
+DevOps fundamentals : 
+
+1) Linux fundamentals : OS fundamentals 
+	 CLI - BASH commands 
+	 OS process and permissions - ps, kill, chmod  different commands 
+	 Package management : apt , yum 
+	 Text editors : vim 
+	 
+ 2) Networking and Security Concepts : 
+		OSI , TCP/IP models 
+		Different protocols : http , https , ssh etc
+		IP address , subnetting, DNS
+		Network issues
+		firewalls, proxy servers 
+		wireshark 
+		load balancers and caching servers 
+		
+3) Scripting ( Programming languages)
+		Python, Ruby, 
+		- Syntax and fundamentals
+		- Usefull libraries
+		- File Handling
+		- Writing automation scripts 
+		
+4) Version Control (Git) 
+		- imp, Git commands : init, clone, commit , push , pull , merge , rebase etc
+		- concept of branching
+		- merging and merge conflict resolution 
+		- working with remote repositiry
+		
+5) Cloud 
+		AWS, Azure, GCP 
+		- Configure & manage servers & data (EC2, S3, RDS) 
+		- manage users , groups and roles (IAM)
+		- setup & manage isolated networks (VPC) 
+	  
+6) Microservices and Containers 
+		Docker 
+		- Overview of virtualization and containerzation
+		- docker images and managing containers
+		- docker commands : run , ps, build etc
+		- writing docker files 
+		- using docker compose 
+		
+7) Setup a CI /CD pipeline 
+		Jenkins
+		Github actions
+		Gitlab CICD
+		Circle CI
+		Travis CI
+		
+8)  Infrastructure as Code (IaC)
+		Provisioning - Terraform Alt:Pulumi
+		Configuring - Alt : Puppet , Chef 
+		
+9) Orchestation and Management 
+	Kuberneties 
+		- Creating and Managing k8s clusters 
+		- deployment of applications on k8s
+		- k8s commands ; apply build delete etc
+10) Monitoring and Logging 
+		popular option : Prometheus , Grafana 
+				Alt : ELK, Fluentd , AWS Cloudwatch 
+				
+============================================================================================================
+15-01-2025
+
+Tools and Techniques Azure Devops Engineer 
+
+1.	Planning - Jira and Confluence 
+			Jira - Jira is Project management and Issue tracking tool 
+			

@@ -1,0 +1,45 @@
+Performance testing : 24-09-2024
+
+Types of Performance metrics : 
+========================================
+What is Metric ? 
+	A Metric is a quantitative measure used to validate various aspects of an application performance. This metrics provides specific data points that help testers and developers understand the how the system behaves under different conditions.
+
+There are 2 types of metrics reported in every performance testing. 1) Application Health metrics 2) Server Health metrics
+	1) Application Health metrics - 
+		Response Time - This is the time taken by the system to respond to a user request.
+		Throughput - The number of transactions  processed by the system per unit of time.
+		Error rate - The rate at which the application transactions are failing.
+
+	2) Server Health metrics - 
+		CPU/Memory/Disk Utilization - Utilization is expressed in the percent of the system resource used during the test like 40% or 50% etc.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+Performance testing vs Performance Engineering :
+=======================================================
+Basically Performance testing is a subset of performance engineering , best example lab technician and doctor 
+Performance testing - Useually deals with the identifying the issues in the application during the performance test.
+Performance Engineering - Not only deals with identifying the issues but also elimate them to build a performance optimized application based on the organization and team size 
+
+--------------------------------------------------------------------------------
+Little's Law : 
+================================================
+This is one of the important topics in Performance testing.
+Littles law is a fundamental theorm in Qing theory a branch of mathematics that deals with study of Qs of law.
+The law is named after John DC little who was a professor at MIT this law is formarlly published in 1961.
+Littles law states that " The average number of items within a system EQUALS the average Arriaval rate of items into and out of the system MUTLIPLIED by the average amount of time an item spends in the system " .
+In mathematics it is represented as L=lamda * W 
+Where L = Average number of customer in a system.
+     lamda = average items arrival rate 
+	W = average time customer spends in the system.
+
+By utilizaing this formula , Improved efficiency , Better customer service , Improved resource utilization.
+
+In Performance testing will use the formula : N = X*Z 
+Where N = Average number of users in a system.
+      X= Throughput (TPS)
+      z= Execution time ( Response time + Think time + Pacing ) 
+
+Performance test results validation , to understand there are any issues with the load simulation, for instance are we simulating the correct number of virtual users to target the desired throughput 
+Workload modeling is an important factor in performance testing , it should reflect the end user pattern we can not simply plan the test with a random number of users understanding the littles law is crusial for performane testers as it provides insights into the relationship between the system utilization , response time and number of concurrent users it helps in Capacity planning performance optimization and predicting system behaviour under different loads 
+			
