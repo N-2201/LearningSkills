@@ -102,5 +102,16 @@ DevOps fundamentals :
 Tools and Techniques Azure Devops Engineer 
 
 1.	Planning - Jira and Confluence 
-			Jira - Jira is Project management and Issue tracking tool 
+			Jira - Jira is Project management and Issue tracking tool developed by Attlassian and it is used for tracking bugs
+					for planning sprints and managing tasks and maintaining agile workflows.
+2.	Code - 	Github and VScode
+
+3.	Build - Azure Devops pipeline 
+			Maven
+			Gradle
+			MSBuild 
+4. Testing - SolarNqube , Selenium , Junit/Nunit/X unit
+
+5.	containerzation	- AKS Azure Kuberneties Service
+
 			
